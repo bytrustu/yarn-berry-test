@@ -1,11 +1,11 @@
-name: CI-wanted-admin
+name: CI-Seroi-client
 
 on:
   push:
     branches:
       - 6-deploy
     paths:
-      - 'apps/admin/**'
+      - 'apps/client/**'
 
 jobs:
   test:
@@ -25,6 +25,6 @@ jobs:
         uses: ./.github/actions/yarn-install
 
       - name: Build web-app
-        working-directory: apps/admin
+        working-directory: apps/client
         run: |
           yarn build
